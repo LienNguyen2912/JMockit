@@ -3,9 +3,10 @@ In order to do the unit test for my child class, I tried to mock the super's met
 but it seems impossible with Mockito.
 I searched somewhere and it it said that jMockit can do what I want. 
 https://stackoverflow.com/questions/14125774/powermock-mocking-a-super-method-invocation
-But some functions of JMockit were deprecated. So, I rewrite it.
+But some functions of JMockit were deprecated. So, I rewrite it. 
+This post maybe useful if you want to use jMockit to mock super' method like me.
 Below is how to import jMockit to Eclipse and mocking the super method.
-
+```
 abstract class BaseService { // jMockit can mock the super class no matter it is abstract or not
     public int save() {
     	System.out.println("base service save executing...");
@@ -44,7 +45,7 @@ public class TestSuperCall {
         new Verifications() {{ mockBase.save(); }};
     }
 }
-
+```
 ## Download jmockit jar file 
 https://javadoc.io/doc/org.jmockit/jmockit/latest/index.html
 For example, in this sample i downloaded jmockit-1.49.jar and put here.
