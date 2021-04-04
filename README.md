@@ -5,7 +5,6 @@ I searched somewhere and it it said that jMockit can do what I want. <br/>
 https://stackoverflow.com/questions/14125774/powermock-mocking-a-super-method-invocation<br/>
 But some functions of JMockit were deprecated. So, I rewrote it. <br/>
 **This post maybe useful to who wanna use jMockit to mock super's method.**<br/>
-## Below is how to import jMockit to Eclipse and mocking the super method.
 ```
 abstract class BaseService { // jMockit can mock the super class no matter it is abstract or not
     public int save() {
@@ -46,6 +45,7 @@ public class TestSuperCall {
     }
 }
 ```
+## Below is how to import jMockit to Eclipse and mocking the super method.
 ### Download jmockit jar file 
 https://javadoc.io/doc/org.jmockit/jmockit/latest/index.html
 For example, in this sample i downloaded jmockit-1.49.jar and put here.
