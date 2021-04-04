@@ -1,11 +1,11 @@
 # Mocking a super method invocation by jMockit on Eclipse
-In order to do the unit test for my child class, I tried to mock the super's method which is called inside the child's method,
-but it seems impossible with Mockito.
-I searched somewhere and it it said that jMockit can do what I want. 
-https://stackoverflow.com/questions/14125774/powermock-mocking-a-super-method-invocation
-But some functions of JMockit were deprecated. So, I rewrite it. 
-This post maybe useful if you want to use jMockit to mock super' method like me.
-Below is how to import jMockit to Eclipse and mocking the super method.
+In order to do the unit test for my child class, I tried to mock the super's method which is called inside the child's method.<br/>
+But it seems impossible with Mockito.<br/>
+I searched somewhere and it it said that jMockit can do what I want. <br/>
+https://stackoverflow.com/questions/14125774/powermock-mocking-a-super-method-invocation<br/>
+But some functions of JMockit were deprecated. So, I rewrote it. <br/>
+**This post maybe useful to who wanna use jMockit to mock super's method.**<br/>
+## Below is how to import jMockit to Eclipse and mocking the super method.
 ```
 abstract class BaseService { // jMockit can mock the super class no matter it is abstract or not
     public int save() {
@@ -46,19 +46,19 @@ public class TestSuperCall {
     }
 }
 ```
-## Download jmockit jar file 
+### Download jmockit jar file 
 https://javadoc.io/doc/org.jmockit/jmockit/latest/index.html
 For example, in this sample i downloaded jmockit-1.49.jar and put here.
 ![0](https://user-images.githubusercontent.com/73010204/113500342-211ad780-9558-11eb-8a71-25cc73a7d064.png)
 
-## Add jmockit library to your project
+### Add jmockit library to your project
 ![1](https://user-images.githubusercontent.com/73010204/113500262-7c989580-9557-11eb-80f8-1029b56eafa8.png)
 ![2](https://user-images.githubusercontent.com/73010204/113500349-3132b700-9558-11eb-94dd-ba8b15ea20b9.png)
 
-## Config javaagent for your test where you want to use jmockit
+### Config javaagent for your test where you want to use jmockit
 ![3](https://user-images.githubusercontent.com/73010204/113500701-1e6db180-955b-11eb-9604-2b4956395bbc.png)
 ![4](https://user-images.githubusercontent.com/73010204/113500704-20377500-955b-11eb-8e7c-948a59f490dd.png)
 
-## Run test
+### Run test
 Right click on the file containning your jMockit test code > Run As > JUnit Test
 
