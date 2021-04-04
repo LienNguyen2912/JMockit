@@ -47,16 +47,16 @@ public class TestSuperCall {
 ```
 ## Below is how to import jMockit to Eclipse and mocking the super method.
 ### Download jmockit jar file 
-https://javadoc.io/doc/org.jmockit/jmockit/latest/index.html
-For example, in this sample i downloaded jmockit-1.49.jar and put here.
+https://javadoc.io/doc/org.jmockit/jmockit/latest/index.html<br/>
+For example, in this sample i downloaded jmockit-1.49.jar and put here.<br/>
 ![0](https://user-images.githubusercontent.com/73010204/113500342-211ad780-9558-11eb-8a71-25cc73a7d064.png)
 
 ### Add jmockit library to your project
-![1](https://user-images.githubusercontent.com/73010204/113500262-7c989580-9557-11eb-80f8-1029b56eafa8.png)
+![1](https://user-images.githubusercontent.com/73010204/113500262-7c989580-9557-11eb-80f8-1029b56eafa8.png)<br/>
 ![2](https://user-images.githubusercontent.com/73010204/113500349-3132b700-9558-11eb-94dd-ba8b15ea20b9.png)
 
 ### Config javaagent for your test where you want to use jmockit
-![3](https://user-images.githubusercontent.com/73010204/113500701-1e6db180-955b-11eb-9604-2b4956395bbc.png)
+![3](https://user-images.githubusercontent.com/73010204/113500701-1e6db180-955b-11eb-9604-2b4956395bbc.png)<br/>
 ![4](https://user-images.githubusercontent.com/73010204/113500704-20377500-955b-11eb-8e7c-948a59f490dd.png)
 
 ### Run test
