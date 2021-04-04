@@ -6,6 +6,9 @@ https://stackoverflow.com/questions/14125774/powermock-mocking-a-super-method-in
 But some functions of JMockit were deprecated. So, I rewrote it. <br/>
 **This post maybe useful to who wanna use jMockit to mock super's method.**<br/>
 ```
+import org.junit.*;
+import mockit.*;
+
 abstract class BaseService { // jMockit can mock the super class no matter it is abstract or not
     public int save() {
     	System.out.println("base service save executing...");
@@ -26,7 +29,7 @@ class ChildService extends BaseService {
 	}
 }
 
-// Below is test part
+// Below is the test part
 class MockBase extends MockUp<BaseService>{
     @Mock
     public int save() {
